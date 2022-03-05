@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="panel" prefHeight="514.0" prefWidth="507.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StorageController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="502.0" prefWidth="497.0" style="-fx-background-color: linear-gradient(to bottom right, #4c9f50,#e6ee9c);">
+         <children>
+            <Button fx:id="exitBtn" layoutX="471.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #b71c1c; -fx-background-radius: 75%;" text="X" textFill="#fffefe">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="16.0" layoutY="8.0" prefHeight="74.0" prefWidth="455.0" style="-fx-background-color: #005005; -fx-border-color: #88b968;">
+               <children>
+                  <Label layoutX="94.0" layoutY="18.0" text="Paddy Storage Details" textFill="#88b968" underline="true">
+                     <font>
+                        <Font name="Bodoni MT" size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="45.0" layoutX="376.0" layoutY="18.0">
+                     <image>
+                        <Image url="@img/outline_savings_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tbl1" layoutX="24.0" layoutY="103.0" minWidth="10.0" prefHeight="334.0" prefWidth="450.0" style="-fx-background-color: #f0f4c3;">
+               <columns>
+                  <TableColumn minWidth="20.0" prefWidth="224.0000057220459" text="Paddy Variety" />
+                  <TableColumn minWidth="20.0" prefWidth="224.79998779296875" text="Total Paddy Amount" />
+               </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TableView>
+            <Button fx:id="updateBtn" layoutX="333.0" layoutY="449.0" mnemonicParsing="false" onAction="#update" style="-fx-background-color: #f0f4c3; -fx-background-radius: 25%;" text="Update">
+               <font>
+                  <Font name="Bodoni MT Bold" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
